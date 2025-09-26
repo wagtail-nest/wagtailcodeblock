@@ -10,7 +10,7 @@ from wagtail.blocks import (
     ChoiceBlock,
 )
 from wagtail.blocks.struct_block import StructBlockAdapter
-from wagtail.telepath import register
+from wagtail.admin.telepath import register
 
 from .settings import get_language_choices
 
