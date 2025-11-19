@@ -1,7 +1,13 @@
 from django.template import Library
 from django.utils.safestring import mark_safe
 
-from ..settings import get_theme, get_line_numbers, get_copy_to_clipboard,  PRISM_VERSION, PRISM_PREFIX
+from ..settings import (
+    get_theme,
+    get_line_numbers,
+    get_copy_to_clipboard,
+    PRISM_VERSION,
+    PRISM_PREFIX,
+)
 
 register = Library()
 
@@ -27,6 +33,7 @@ def line_numbers_js():
     else:
         return ""
 
+
 @register.simple_tag
 def copy_to_clipboard_js():
     """Returns the JavaScript stanza to include the copy to clipboard code."""
@@ -40,6 +47,7 @@ def copy_to_clipboard_js():
         """)
     else:
         return ""
+
 
 @register.simple_tag
 def toolbar_js():

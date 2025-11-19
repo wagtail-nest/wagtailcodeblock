@@ -40,13 +40,17 @@ def test_page(db):
         numchild=0,
         url_path="/wagtail-code-block/",
         # Wagtail Code Block test fields
-        body=dumps([{
-            "type": "code",
-            "value": {
-                "language": "python",
-                "code": "print([x for x in range(1, 5)])",
-            },
-        }]),
+        body=dumps(
+            [
+                {
+                    "type": "code",
+                    "value": {
+                        "language": "python",
+                        "code": "print([x for x in range(1, 5)])",
+                    },
+                }
+            ]
+        ),
     )
 
     return test_page
