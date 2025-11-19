@@ -3,7 +3,7 @@ from json import dumps
 from django.contrib.contenttypes.models import ContentType
 
 import pytest
-from wagtail.models import Page, Locale, Site
+from wagtail.models import Page
 
 from tests.models import CodeBlockPage
 
