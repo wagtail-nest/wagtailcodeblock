@@ -29,7 +29,7 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dependencies = [
-    "wagtail>=4",
+    "wagtail>=6",
 ]
 
 [project.optional-dependencies]
@@ -50,6 +50,10 @@ dev = [
 requires = ["setuptools>=67", "setuptools_scm>=7", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.coverage.run]
+plugins = ["django_coverage_plugin"]
+include = ["wagtailcodeblock/*"]
+
 [tool.setuptools_scm]
 write_to = "wagtailcodeblock/_version.py"
 
@@ -58,6 +62,6 @@ addopts = "--cov --cov-report=html"
 python_files = "tests.py test_*.py"
 DJANGO_SETTINGS_MODULE = "tests.settings"
 
-[tool.coverage.run]
-plugins = ["django_coverage_plugin"]
-include = ["wagtailcodeblock/*"]
+[tool.ruff]
+lint.extend-select = ["I"]
+exclude = [".git"] 
