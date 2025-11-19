@@ -58,7 +58,7 @@ include = ["wagtailcodeblock/*"]
 write_to = "wagtailcodeblock/_version.py"
 
 [tool.pytest.ini_options]
-addopts = "--cov --cov-report=html"
+addopts = "--cov --cov-report=html --reuse-db"
 python_files = "tests.py test_*.py"
 DJANGO_SETTINGS_MODULE = "tests.settings"
 

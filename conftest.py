@@ -1,21 +1,21 @@
+import pytest
 from json import dumps
 
 from django.contrib.contenttypes.models import ContentType
-
-import pytest
 from wagtail.models import Page
 
 from tests.models import CodeBlockPage
+
 
 
 @pytest.fixture
 def test_page(db):
     """
     Create a root page in the same way Wagtail does in migrations. See:
-    https://github.com/wagtail/wagtail/blob/main/wagtail/core/migrations/0002_initial_data.py#L12  # noqa
+    https://github.com/wagtail/wagtail/blob/main/wagtail/core/migrations/0002_initial_data.py#L12
 
     Then create the test page.
-    """
+    """  # noqa
     page_content_type, created = ContentType.objects.get_or_create(
         model="page", app_label="wagtailcore"
     )
