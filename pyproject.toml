@@ -29,7 +29,7 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dependencies = [
-    "wagtail>=6",
+    "wagtail>=7.1",
 ]
 
 [project.optional-dependencies]
