@@ -7,8 +7,20 @@
     padding: 0 !important;
 }
 
+/* FreeMono renders invisibly in Firefox, see #55. */
 .code-block textarea {
-    font-family: FreeMono, monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Prism's "comment" token class also matches Wagtail's comment card styles. */
+.code-block pre .token.comment {
+    display: inline;
+    width: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    transition: none;
 }
 
 .code-block code {
